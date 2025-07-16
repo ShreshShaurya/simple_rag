@@ -58,9 +58,8 @@ jsonschema==4.24.0
 jsonschema-specifications==2025.4.1
 kubernetes==33.1.0
 langchain<=0.4
-langchain-core<0.3.66
+langchain-core
 langchain-google-genai==1.0.2
-langchain-text-splitters==0.3.8
 langsmith==0.4.4
 markdown-it-py==3.0.0
 MarkupSafe==3.0.2
