@@ -68,7 +68,7 @@ with st.form("chat"):
 
         if not search:
             retriever = vectorstore.as_retriever(search_kwargs={"k": 2})
-            gemini_model = generate_response() #calling the model
+            gemini_model = generate_response(GOOGLE_API_KEY) #calling the model
 
             rag_chain = get_prompt_template(retriever,gemini_model)
             
