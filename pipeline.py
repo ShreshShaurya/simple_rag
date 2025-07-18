@@ -9,6 +9,10 @@ from langchain_core.documents import Document
 #splitting
 
 #calling chroma db
+__import__('pysqlite3')
+import sys
+#for sqlite3 error that arises after we use chroma or crewai library
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 from langchain_chroma import Chroma
 import sqlite3
 from langchain.text_splitter import RecursiveCharacterTextSplitter
@@ -33,10 +37,7 @@ def load_embedding_model():
 # getting key through env file
 GOOGLE_API = os.getenv('GOOGLE_API_KEY')
 
-import('pysqlite3')
-import sys
-#for sqlite3 error that arises after we use chroma or crewai library
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 
 
 #Initializing Gemini Model
