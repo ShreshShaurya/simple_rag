@@ -59,6 +59,8 @@ jsonschema-specifications==2025.4.1
 kubernetes==33.1.0
 langchain<=0.4
 langchain-core
+langchain-chroma
+langchain-community
 langchain-google-genai
 langsmith==0.4.4
 markdown-it-py==3.0.0
