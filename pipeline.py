@@ -10,6 +10,7 @@ from langchain_core.documents import Document
 
 #calling chroma db
 from langchain_chroma import Chroma
+import sqlite3
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 import streamlit as st
 import regex as re
