@@ -33,6 +33,11 @@ def load_embedding_model():
 # getting key through env file
 GOOGLE_API = os.getenv('GOOGLE_API_KEY')
 
+__import__('pysqlite3')
+import sys
+#for sqlite3 error that arises after we use chroma or crewai library
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 
 #Initializing Gemini Model
 def generate_response(GOOGLE_API):
